@@ -1,0 +1,6 @@
+rfid_reader: 0 
+PollCard: 0 
+version: ODALID COUPLEUR v1.14 
+nom: CANDAPPANE 
+prenom: Vincent 
+increment: 186 

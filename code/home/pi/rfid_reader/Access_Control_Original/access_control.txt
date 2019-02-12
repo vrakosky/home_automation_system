@@ -1,0 +1,8 @@
+RFID_Readerstatus  : 0 
+status after ISO14443_3_A_PollCard  : 0 
+version  : ODALID COUPLEUR v1.14 
+status  : ODALID COUPLEUR 
+status  : CANDAPPANE 
+status  : Vincent 
+Incrementing  : 21 
+Decrementing  : 20 

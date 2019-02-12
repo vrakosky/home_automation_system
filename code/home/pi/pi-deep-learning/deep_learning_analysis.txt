@@ -1,0 +1,13 @@
+[INFO] loading model...
+
+[INFO] classification took 0.9719 seconds
+
+1. microwave, probability: 18.013%
+
+2. screen, probability: 13.109%
+
+3. desktop computer, probability: 12.035%
+
+4. monitor, probability: 6.6559%
+
+5. laptop, probability: 5.3118%

@@ -1,0 +1,63 @@
+html, body
+{
+    margin: 0;
+}
+
+.button 
+{
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 4em;
+    padding: 25px 25px;
+    cursor: pointer;
+    width: 100%;
+    height: 20vh;
+}
+
+#ON
+{
+    background-color: green;
+}
+
+#OFF
+{
+    background-color: red;    
+}
+
+#ON_dim
+{
+    background: linear-gradient(blue, white);
+}
+
+#OFF_dim
+{
+    background: linear-gradient(white, black);    
+}
+
+#ON_pwm
+{
+    background: linear-gradient(to left, green, yellow);
+}
+#OFF_pwm
+{
+    background: linear-gradient(to left, black, green, yellow);
+}
+
+#ON_alarm
+{
+    background: linear-gradient(to right, white,blue,white,blue,white,blue,white);
+}
+#OFF_alarm
+{
+    background: linear-gradient(to right, white,blue,black);
+}
+
+#ON_all
+{
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+}
+#OFF_all
+{
+    background: linear-gradient(to right, violet,indigo,blue,green,yellow,coral,red,black);
+}

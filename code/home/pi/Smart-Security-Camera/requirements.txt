@@ -1,0 +1,4 @@
+imutils
+flask
+picamera[array]
+RPi.GPIO

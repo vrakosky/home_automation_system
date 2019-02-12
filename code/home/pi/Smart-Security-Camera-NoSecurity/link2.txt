@@ -1,0 +1,51 @@
+1 - Permet de cree un lien entre ttyACM0 et ttyS1
+sudo ln -s /dev/ttyACM0 /dev/ttyS1
+
+2 - Afficher la température : 
+/opt/vc/bin/vcgencmd measure_temp
+
+3a - cmake pour openCV 3.1.0 : 
+cmake -D CMAKE_BUILD_TYPE=RELEASE     -D CMAKE_INSTALL_PREFIX=/usr/local     -D INSTALL_PYTHON_EXAMPLES=ON     -D OPENCV_EXTRA_MODULES_PATH=~/opencv/opencv_contrib-3.1.0/modules     -D BUILD_EXAMPLES=ON -D ENABLE_PRECOMPILED_HEADERS=OFF ..
+
+3a - Final pour openCV 3.1.0 :
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules -D BUILD_EXAMPLES=ON -D ENABLE_PRECOMPILED_HEADERS=OFF ..
+
+3b - cmake pour openCV 3.3.0 (updated) :
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules \
+      -D ENABLE_NEON=ON \
+      -D ENABLE_VFPV3=ON \
+      -D BUILD_TESTS=OFF \
+      -D INSTALL_PYTHON_EXAMPLES=OFF \
+      -D ENABLE_PRECOMPILED_HEADERS=OFF \
+      -D BUILD_EXAMPLES=OFF ..
+
+3b - Final2 pour openCV 3.3.0 : 
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D ENABLE_PRECOMPILED_HEADERS=OFF -D BUILD_EXAMPLES=OFF ..
+
+3b - Final2 pour openCV 3.3.0 (without headers):
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.3.0/modules -D ENABLE_NEON=ON -D ENABLE_VFPV3=ON -D BUILD_TESTS=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D BUILD_EXAMPLES=OFF ..
+
+4 - Fichier ~/.profile
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/pi/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+5 - Step #6: Finish installing OpenCV on your Pi
+ls -l /usr/local/lib/python3.5/site-packages/
+cd /usr/local/lib/python3.5/site-packages/
+sudo mv cv2.cpython-35m-arm-linux-gnueabihf.so cv2.so
+cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
+ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so
+
+Now everything works with the command : python3 (python not working)
+
+6 - Step #4: Create your Python virtual environment and install NumPy
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+
+
+
+
+ 
